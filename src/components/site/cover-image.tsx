@@ -10,21 +10,21 @@ export function CoverImage({
   src,
   alt,
   sizes,
-  priority,
+  preload,
   className,
   aspect = "aspect-[16/9]",
 }: {
   src: string | null | undefined;
   alt: string;
   sizes: string;
-  priority?: boolean;
+  preload?: boolean;
   className?: string;
   aspect?: string;
 }) {
   return (
     <div className={cn("relative overflow-hidden bg-slate-100", aspect, className)}>
       {src ? (
-        <Image src={src} alt={alt} fill sizes={sizes} priority={priority} className="object-cover" />
+        <Image src={src} alt={alt} fill sizes={sizes} preload={preload} className="object-cover" />
       ) : (
         <div
           className="flex h-full w-full items-center justify-center bg-gradient-to-br from-brand/15 via-brand/5 to-brand-2/15 text-brand/50"

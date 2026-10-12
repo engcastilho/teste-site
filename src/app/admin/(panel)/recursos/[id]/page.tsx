@@ -40,7 +40,7 @@ export default async function EditResourcePage(props: PageProps<"/admin/recursos
         }
       />
       <ResourceForm
-        key={result.resource.updated_at}
+       
         resource={result.resource}
         newsOptions={toNewsOptions(news)}
         linkedNewsIds={result.newsIds}

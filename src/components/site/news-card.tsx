@@ -4,14 +4,14 @@ import { formatDate } from "@/lib/format";
 import type { NewsSummary } from "@/lib/types";
 import { CoverImage } from "@/components/site/cover-image";
 
-export function NewsCard({ news, priority }: { news: NewsSummary; priority?: boolean }) {
+export function NewsCard({ news, preload }: { news: NewsSummary; preload?: boolean }) {
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
       <CoverImage
         src={news.cover_image_url}
         alt={news.cover_image_alt ?? ""}
         sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
-        priority={priority}
+        preload={preload}
       />
       <div className="flex flex-1 flex-col gap-3 p-5">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-500">

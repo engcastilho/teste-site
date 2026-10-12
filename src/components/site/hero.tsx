@@ -45,7 +45,7 @@ export function Hero({ settings }: { settings: SiteSettings }) {
                 src={settings.hero_image_url}
                 alt={`Fotografia de ${settings.site_name}`}
                 fill
-                priority
+                preload
                 sizes="(min-width: 768px) 420px, 90vw"
                 className="object-cover"
               />

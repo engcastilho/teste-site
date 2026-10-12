@@ -16,6 +16,8 @@ const nextConfig: NextConfig = {
     },
   },
   images: {
+    // Só para desenvolvimento com o Supabase local (127.0.0.1).
+    dangerouslyAllowLocalIP: ["localhost", "127.0.0.1"].includes(supabaseHost?.hostname ?? ""),
     remotePatterns: [
       { protocol: "https", hostname: "*.supabase.co", pathname: "/storage/v1/object/public/**" },
       ...(supabaseHost

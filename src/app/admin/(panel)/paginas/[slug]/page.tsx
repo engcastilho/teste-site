@@ -27,7 +27,7 @@ export default async function EditPagePage(props: PageProps<"/admin/paginas/[slu
           </Button>
         }
       />
-      <PageForm key={page.updated_at} page={page} withImage={slug === "sobre"} />
+      <PageForm page={page} withImage={slug === "sobre"} />
     </>
   );
 }

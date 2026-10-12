@@ -30,7 +30,7 @@ export function NewsArticle({ news }: { news: News & { resources: Resource[] } }
           src={news.cover_image_url}
           alt={news.cover_image_alt ?? ""}
           sizes="(min-width: 768px) 720px, 100vw"
-          priority
+          preload
           className="mt-8 rounded-2xl"
         />
       )}

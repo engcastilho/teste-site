@@ -1,5 +1,6 @@
 import "server-only";
 import { redirect } from "next/navigation";
+import { connection } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { isSupabaseConfigured } from "@/lib/env";
 
@@ -15,6 +16,8 @@ export type AdminSession = {
  * está na tabela admin_users. Retorna null se não houver sessão.
  */
 export async function getSession(): Promise<AdminSession | null> {
+  // A sessão é sempre lida no momento da requisição (nunca pré-renderizada).
+  await connection();
   if (!isSupabaseConfigured) return null;
 
   const supabase = await createClient();

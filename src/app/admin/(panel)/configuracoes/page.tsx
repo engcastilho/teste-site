@@ -10,7 +10,7 @@ export default async function AdminSettingsPage() {
   return (
     <>
       <AdminPageHeader title="Configurações do site" description="Cores, logotipo, textos da página inicial, contatos e redes sociais." />
-      <SettingsForm key={settings.updated_at} settings={settings} />
+      <SettingsForm settings={settings} />
     </>
   );
 }

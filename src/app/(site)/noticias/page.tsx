@@ -62,7 +62,7 @@ async function NewsList({ searchParams }: { searchParams: PageProps<"/noticias">
       {items.length ? (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item, i) => (
-            <NewsCard key={item.id} news={item} priority={i < 2} />
+            <NewsCard key={item.id} news={item} preload={i < 2} />
           ))}
         </div>
       ) : (

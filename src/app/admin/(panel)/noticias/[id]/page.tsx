@@ -50,7 +50,7 @@ export default async function EditNewsPage(props: PageProps<"/admin/noticias/[id
         }
       />
       <NewsForm
-        key={news.updated_at}
+       
         news={newsData}
         resourceOptions={resources.map((r) => ({
           id: r.id,
